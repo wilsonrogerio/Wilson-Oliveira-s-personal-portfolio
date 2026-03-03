@@ -1,39 +1,203 @@
-@use "../../../styles.scss" as *;
+@use "../../../styles/variables" as *;
 
-.layout {
-  display: flex;
+.ct-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 
-.content {
-  padding: 4rem;
+.ct-sub {
+  font-size: .95rem;
+  color: $t2;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.ct-lbl {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: $accent;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ct-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ct-ic {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: $bg2;
+  border: 1px solid $bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ci-lb {
+  font-size: .72rem;
+  color: $t2;
+}
+
+.ci-vl {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.soc-lbl {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: $accent;
+  text-transform: uppercase;
+  margin: 24px 0 12px;
+}
+
+.soc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.soc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 8px;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.quote {
+  background: linear-gradient(135deg, #1e3a8a22, #2563eb22);
+  border: 1px solid #2563eb44;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.quote blockquote {
+  font-size: .9rem;
+  font-style: italic;
+  color: $t2;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.form-card {
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-g {
+  margin-bottom: 16px;
+}
+
+.form-lbl {
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.fi,
+.fs,
+.fta {
   width: 100%;
+  padding: 11px 14px;
+  background: $bg3;
+  border: 1px solid $bd;
+  border-radius: 8px;
+  color: $t1;
+  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color .2s;
 }
 
-.contact-container {
-  display: flex;
-  gap: 3rem;
-  margin-top: 2rem;
+.fi::placeholder,
+.fta::placeholder {
+  color: $t2;
 }
 
-.form {
+.fi:focus,
+.fs:focus,
+.fta:focus {
+  border-color: $accent;
+}
+
+.fs {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-color: $bg3;
+}
+
+.fs option {
+  background: $bg3;
+  color: $t1;
+}
+
+.fta {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.btn-send {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  input,
-  textarea {
-    background: $bg-card;
-    border: 1px solid $border-color;
-    padding: 0.8rem;
-    border-radius: 8px;
-    color: $text-primary;
-  }
-
-  button {
-    background: $accent;
-    border: none;
-    padding: 0.9rem;
-    border-radius: 8px;
-    color: white;
-  }
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: $accent;
+  color: #fff;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
 }

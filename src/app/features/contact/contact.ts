@@ -3,7 +3,7 @@ import { Sidebar } from '../../core/components/sidebar/sidebar';
 
 @Component({
   selector: 'app-contact',
-  imports: [Sidebar],
+  imports: [],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

@@ -5,7 +5,7 @@ import { Sidebar } from "../../core/components/sidebar/sidebar";
 
 @Component({
   selector: 'app-projects',
-  imports: [FormsModule, CommonModule, Sidebar],
+  imports: [FormsModule, CommonModule,],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

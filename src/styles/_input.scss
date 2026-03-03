@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  background: $bg3;
+  border: 1px solid $bd;
+  border-radius: 8px;
+  color: $t1;
+  font-size: .875rem;
+  outline: none;
+  transition: border-color .2s;
+
+  &::placeholder {
+    color: $t2;
+  }
+
+  &:focus {
+    border-color: $accent;
+  }
+}

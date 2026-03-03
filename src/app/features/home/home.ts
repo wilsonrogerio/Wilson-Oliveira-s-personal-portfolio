@@ -3,7 +3,7 @@ import { Sidebar } from "../../core/components/sidebar/sidebar";
 
 @Component({
   selector: 'app-home',
-  imports: [Sidebar],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

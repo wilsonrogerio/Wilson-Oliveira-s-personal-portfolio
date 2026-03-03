@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: $accent;
+  color: #fff;
+  border: 2px solid $accent;
+
+  &:hover {
+    background: $accent-h;
+    border-color: $accent-h;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $t1;
+  border: 2px solid $bd2;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+}
+
+.btn-ghost {
+  background: $bg2;
+  border: 1px solid $bd;
+  color: $t1;
+}

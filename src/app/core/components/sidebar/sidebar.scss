@@ -1,64 +1,169 @@
-@use "../../../../styles.scss" as *;
+@use "../../../../styles/variables" as *;
 
 .sidebar {
-  width: 260px;
-  height: 100vh;
-  background: $bg-card;
-  padding: 2rem;
+  width: 220px;
+  background: $bg;
+  border-right: 1px solid $bd;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid $border-color;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100
+}
 
-  .profile {
-    text-align: center;
+.sb-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 18px;
+  border-bottom: 1px solid $bd
+}
 
-    img {
-      width: 70px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
+.sb-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: $bg3;
+  border: 2px solid $bd2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
-    h2 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
+.sb-name {
+  font-size: .85rem;
+  font-weight: 700
+}
 
-    span {
-      color: $text-secondary;
-      font-size: 0.9rem;
-    }
-  }
+.sb-role {
+  font-size: .72rem;
+  color: $t2;
+  margin-top: 1px
+}
 
-  nav {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.sb-nav {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px
+}
 
-    a {
-      text-decoration: none;
-      color: $text-secondary;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
+.ni {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: $t2;
+  font-size: .875rem;
+  transition: all .18s;
+  cursor: pointer
+}
 
-      &:hover {
-        background: $bg-soft;
-        color: $text-primary;
-      }
-    }
-  }
+.ni svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0
+}
 
-  .cv-btn {
-    margin-top: auto;
-    padding: 0.8rem;
-    border-radius: 8px;
-    border: none;
-    background: $accent;
-    color: white;
-    cursor: pointer;
+.ni:hover {
+  background: $bg2;
+  color: $t1;
+}
 
-    &:hover {
-      background: $accent-hover;
-    }
-  }
+.ni.active {
+  background: $accent;
+  color: #fff
+}
+
+.sb-bottom {
+  border-top: 1px solid $bd;
+}
+
+.cv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: calc(100% - 24px);
+  margin: 12px;
+  padding: 10px;
+  background: $accent;
+  color: #fff;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 600
+}
+
+.sb-social {
+  display: flex;
+  gap: 8px;
+  padding: 2px 12px 14px
+}
+
+.soc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  background: $bg2;
+  border: 1px solid $bd2;
+  color: $t2
+}
+
+.status-wrap {
+  padding: 0 12px 14px
+}
+
+.status-card {
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 10px;
+  padding: 12px 14px
+}
+
+.status-lbl {
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: $t3;
+  text-transform: uppercase;
+  margin-bottom: 6px
+}
+
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .72rem;
+  color: $t2
+}
+
+.status-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $green;
+  box-shadow: 0 0 6px $green
+}
+
+.redes-lbl {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: $t3;
+  text-transform: uppercase;
+  padding: 8px 12px 8px;
+  display: block
+}
+
+a {
+  text-decoration: none;
 }

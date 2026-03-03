@@ -3,7 +3,7 @@ import { Sidebar } from '../../core/components/sidebar/sidebar';
 
 @Component({
   selector: 'app-sobre',
-  imports: [Sidebar],
+  imports: [],
   templateUrl: './sobre.html',
   styleUrl: './sobre.scss',
 })

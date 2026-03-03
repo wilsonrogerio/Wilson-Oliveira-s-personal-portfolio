@@ -1,23 +1,250 @@
-@use "../../../styles.scss" as *;
+@use "../../../styles/variables" as *;
 
-.layout {
-  display: flex;
-}
-
-.content {
-  padding: 4rem;
-}
-
-.skills-grid {
-  margin-top: 2rem;
+.sb-hero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 52px;
+}
 
-  div {
-    background: $bg-card;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-  }
+.sb-av {
+  width: 140px;
+  height: 160px;
+  border-radius: 12px;
+  background: $bg2;
+  border: 1px solid $bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sb-h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.sb-p {
+  font-size: .95rem;
+  color: $t2;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 20px;
+}
+
+.sb-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 20px;
+  font-size: .85rem;
+  color: $t2;
+}
+
+.sk-sec {
+  margin-bottom: 52px;
+}
+
+.sk-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.sk-card {
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.sk-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: $bg3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sk-name {
+  font-size: .8rem;
+  font-weight: 600;
+  color: $t2;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 52px;
+  align-items: start;
+}
+
+.edu-tl {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-item {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.edu-item::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  bottom: 0;
+  width: 1px;
+  background: $bd;
+}
+
+.edu-item:last-child::before {
+  display: none;
+}
+
+.edu-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $accent;
+  flex-shrink: 0;
+  margin-top: 2px;
+  z-index: 1;
+}
+
+.edu-dot.g {
+  background: $bd2;
+}
+
+.edu-yr {
+  font-size: .75rem;
+  font-weight: 600;
+  color: $accent;
+  margin-bottom: 4px;
+}
+
+.edu-deg {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.edu-sch {
+  font-size: .85rem;
+  color: $t2;
+  margin-bottom: 6px;
+}
+
+.edu-dsc {
+  font-size: .8rem;
+  color: $t3;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert {
+  background: $bg2;
+  border: 1px solid $bd;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cert-ic {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: $bg3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid $bd2;
+}
+
+.cert-n {
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.cert-pr {
+  font-size: .75rem;
+  color: $t2;
+}
+
+.cta {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 18px;
+  padding: 48px 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .75);
+  margin-bottom: 28px;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-w {
+  padding: 13px 26px;
+  background: #fff;
+  color: #1d4ed8;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.btn-wo {
+  padding: 13px 26px;
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
 }

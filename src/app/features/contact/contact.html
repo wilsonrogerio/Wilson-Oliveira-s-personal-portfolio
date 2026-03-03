@@ -1,19 +1,85 @@
-<div class="layout">
-  <main class="content">
-    <h1>Entre em Contato</h1>
+<div id="pg-contato" class="page">
+  <h1 class="ct-title">Entre em Contato</h1>
+  <p class="ct-sub">Estou disponível para novos projetos e colaborações interessantes. Se você tem uma ideia ou apenas
+    quer dizer oi, mande uma mensagem!</p>
 
-    <div class="contact-container">
-      <div class="info">
-        <p>Email: contato@wilsonoliveira.dev</p>
-        <p>Localização: Brasil</p>
+  <div class="ct-grid">
+    <div>
+      <div class="ct-lbl">INFORMAÇÕES</div>
+      <div class="ct-item">
+        <div class="ct-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+            stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg></div>
+        <div>
+          <div class="ci-lb">E-mail</div>
+          <div class="ci-vl">contato@portfolio.com</div>
+        </div>
+      </div>
+      <div class="ct-item">
+        <div class="ct-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+            stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg></div>
+        <div>
+          <div class="ci-lb">Localização</div>
+          <div class="ci-vl">São Paulo, Brasil</div>
+        </div>
       </div>
 
-      <form class="form">
-        <input type="text" placeholder="Seu nome" />
-        <input type="email" placeholder="Seu email" />
-        <textarea placeholder="Sua mensagem"></textarea>
-        <button>Enviar Mensagem</button>
-      </form>
+      <div class="soc-lbl">SIGA-ME</div>
+      <div class="soc-links">
+        <a class="soc-link" href="#"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>LinkedIn</a>
+        <a class="soc-link" href="#"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>GitHub</a>
+      </div>
+
+      <div class="quote">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5">
+          <path
+            d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+          <path
+            d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+        </svg>
+        <blockquote>"O design não é apenas o que parece e o que se sente. O design é como funciona."</blockquote>
+      </div>
     </div>
-  </main>
+
+    <div class="form-card">
+      <div class="form-row">
+        <div class="form-g"><label class="form-lbl">Nome Completo</label><input class="fi" type="text"
+            placeholder="Seu nome"></div>
+        <div class="form-g"><label class="form-lbl">E-mail</label><input class="fi" type="email"
+            placeholder="seu@email.com"></div>
+      </div>
+      <div class="form-g">
+        <label class="form-lbl">Assunto</label>
+        <select class="fs">
+          <option>Novo Projeto</option>
+          <option>Freelance</option>
+          <option>Consultoria</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-g">
+        <label class="form-lbl">Sua Mensagem</label>
+        <textarea class="fta" placeholder="Como posso te ajudar?"></textarea>
+      </div>
+      <button class="btn-send">Enviar Mensagem <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13" />
+          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+        </svg></button>
+    </div>
+  </div>
 </div>
