@@ -1,0 +1,23 @@
+@use "../../../styles.scss" as *;
+
+.layout {
+  display: flex;
+}
+
+.content {
+  padding: 4rem;
+}
+
+.skills-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  div {
+    background: $bg-card;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
