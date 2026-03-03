@@ -1,25 +1,39 @@
-<section>
-  <h1 class="pg-head">Meus Projetos</h1>
-  <p class="pg-sub">Explore as soluções que desenvolvi recentemente.</p>
+<div class="layout">
+  <app-sidebar></app-sidebar>
 
-  <div class="topbar">
-    <div class="t-search">
-      <input type="text" placeholder="Buscar projeto..." [ngModel]="searchQuery()"
-        (ngModelChange)="searchQuery.set($event)">
+  <main class="content">
+    <h1>Meus Projetos</h1>
+    <p>Exploração de tecnologias e soluções desenvolvidas.</p>
+
+    <div class="filters">
+      <button class="active">Todos</button>
+      <button>React</button>
+      <button>Node.js</button>
+      <button>TypeScript</button>
+      <button>Mobile</button>
     </div>
-  </div>
 
-  <div class="proj-grid">
-    @for (item of filteredProjects(); track item.id) {
-    <article class="pc">
-      <div class="pc-thumb"></div>
-      <div style="padding: 20px;">
-        <h3 class="feat-title">{{ item.title }}</h3>
-        <p class="feat-desc">{{ item.desc }}</p>
+    <div class="grid">
+      <div class="card">
+        <div class="image"></div>
+        <h3>NeoShop E-commerce</h3>
+        <p>Plataforma completa de vendas online.</p>
+        <div class="tags">
+          <span>React</span>
+          <span>Node</span>
+          <span>Tailwind</span>
+        </div>
       </div>
-    </article>
-    } @empty {
-    <p>Nenhum projeto encontrado.</p>
-    }
-  </div>
-</section>
+
+      <div class="card">
+        <div class="image"></div>
+        <h3>FinTrack Analytics</h3>
+        <p>Painel administrativo para controle financeiro.</p>
+        <div class="tags">
+          <span>Next.js</span>
+          <span>Chart.js</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

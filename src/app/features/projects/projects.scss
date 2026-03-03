@@ -1,0 +1,60 @@
+@use "../../../styles.scss" as *;
+
+.layout {
+  display: flex;
+}
+
+.content {
+  padding: 4rem;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  button {
+    background: $bg-soft;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    color: $text-secondary;
+
+    &.active {
+      background: $accent;
+      color: white;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: $bg-card;
+  padding: 1.5rem;
+  border-radius: 12px;
+
+  .image {
+    height: 150px;
+    background: $bg-soft;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    margin-top: 1rem;
+
+    span {
+      background: $bg-soft;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}

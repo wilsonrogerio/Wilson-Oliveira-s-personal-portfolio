@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Sidebar } from "../../core/components/sidebar/sidebar";
 
 @Component({
   selector: 'app-projects',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, Sidebar],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

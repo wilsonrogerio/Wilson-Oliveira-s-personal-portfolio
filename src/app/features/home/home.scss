@@ -1,0 +1,59 @@
+@use "../../../styles.scss" as *;
+
+.layout {
+  display: flex;
+}
+
+.content {
+  padding: 4rem;
+  max-width: 900px;
+}
+
+.status {
+  color: $accent;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+
+  span {
+    color: $accent;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  button {
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .primary {
+    background: $accent;
+    color: white;
+  }
+
+  .secondary {
+    background: $bg-soft;
+    color: $text-primary;
+  }
+}
+
+.skills {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .skill {
+    padding: 0.6rem 1rem;
+    background: $bg-card;
+    border-radius: 8px;
+  }
+}
