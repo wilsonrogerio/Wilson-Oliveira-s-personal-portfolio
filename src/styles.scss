@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+$bg-dark: #0b1622;
+$bg-card: #111c2b;
+$bg-soft: #162334;
+$text-primary: #e6edf3;
+$text-secondary: #9ba5b4;
+$accent: #2f81f7;
+$accent-hover: #1f6feb;
+$border-color: #1f2d3d;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: $bg-dark;
+  color: $text-primary;
+}
