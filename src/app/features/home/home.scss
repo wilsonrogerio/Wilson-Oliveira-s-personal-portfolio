@@ -2,11 +2,29 @@
 
 .layout {
   display: flex;
+  min-height: 100vh;
 }
 
+/* Faz o conteúdo ocupar o espaço ao lado da sidebar */
 .content {
+  flex: 1;
   padding: 4rem;
-  max-width: 900px;
+  display: flex;
+  align-items: center;
+}
+
+/* HERO PRINCIPAL */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+/* LADO ESQUERDO */
+.hero-left {
+  flex: 1;
 }
 
 .status {
@@ -17,6 +35,7 @@
 h1 {
   font-size: 3rem;
   margin: 1rem 0;
+  line-height: 1.2;
 
   span {
     color: $accent;
@@ -26,10 +45,10 @@ h1 {
 .buttons {
   display: flex;
   gap: 1rem;
-  margin: 2rem 0;
+  margin-top: 2rem;
 
   button {
-    padding: 0.9rem 1.5rem;
+    padding: 0.9rem 1.6rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -41,19 +60,21 @@ h1 {
   }
 
   .secondary {
-    background: $bg-soft;
+    background: #162334;
     color: $text-primary;
   }
 }
 
-.skills {
+/* LADO DIREITO */
+.hero-right {
+  flex: 1;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .skill {
-    padding: 0.6rem 1rem;
-    background: $bg-card;
-    border-radius: 8px;
-  }
+.image-placeholder {
+  width: 420px;
+  height: 420px;
+  background: #111c2b;
+  border-radius: 20px;
 }
