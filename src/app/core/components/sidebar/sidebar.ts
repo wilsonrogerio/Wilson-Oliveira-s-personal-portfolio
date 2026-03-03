@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IconComponent } from '../../../shared/icon,component';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule,],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
