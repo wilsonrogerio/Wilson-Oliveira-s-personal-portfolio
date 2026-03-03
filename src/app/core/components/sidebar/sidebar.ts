@@ -5,7 +5,8 @@ import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, CommonModule,],
+  imports: [RouterLink, CommonModule, LucideAngularModule
+  ],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
