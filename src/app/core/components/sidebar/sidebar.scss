@@ -174,3 +174,54 @@
 a {
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: row;
+    /* Alinha logo/perfil e nav horizontalmente se desejar */
+    position: sticky;
+    /* Gruda no topo */
+    border-right: none;
+    border-bottom: 1px solid $bd;
+    padding: 0;
+  }
+
+  /* Esconde elementos pesados para mobile */
+  .sb-profile,
+  .sb-bottom,
+  .redes-lbl,
+  .sb-social,
+  .status-wrap {
+    display: none !important;
+  }
+
+  .sb-nav {
+    flex-direction: row;
+    /* Ícones lado a lado */
+    justify-content: space-around;
+    padding: 8px;
+    width: 100%;
+    gap: 2px;
+  }
+
+  .ni {
+    flex-direction: column;
+    /* Ícone em cima, texto embaixo */
+    gap: 4px;
+    padding: 8px 4px;
+    font-size: 0.65rem;
+    /* Texto bem pequeno para caber */
+    flex: 1;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  .ni svg {
+    width: 20px;
+    /* Ícone um pouco maior para toque */
+    height: 20px;
+  }
+
+}

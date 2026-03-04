@@ -201,3 +201,79 @@ a {
   width: 100%;
   margin-top: 4px;
 }
+
+/* --- RESPONSIVIDADE CONTATO (ATÉ 768px) --- */
+@media (max-width: 768px) {
+  .ct-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .ct-sub {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0 auto 32px;
+  }
+
+  .ct-grid {
+    grid-template-columns: 1fr;
+    /* Transforma em uma única coluna */
+    gap: 32px;
+  }
+
+  .ct-item {
+    justify-content: center;
+    /* Centraliza itens de contato (email/local) */
+    text-align: center;
+    flex-direction: column;
+    /* Ícone em cima do texto no mobile */
+    gap: 8px;
+  }
+
+  .soc-lbl,
+  .ct-lbl {
+    text-align: center;
+  }
+
+  .soc-links {
+    display: flex;
+    flex-direction: column;
+    /* Links de redes sociais um embaixo do outro */
+    gap: 10px;
+  }
+
+  .soc-link {
+    width: 100%;
+    /* Botões de redes sociais ocupam toda a largura */
+    justify-content: center;
+  }
+
+  .form-card {
+    padding: 20px;
+    /* Reduz o padding do card para ganhar espaço interno */
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    /* Nome e Sobrenome ficam empilhados */
+    gap: 16px;
+  }
+
+  .quote {
+    text-align: center;
+    padding: 16px;
+  }
+}
+
+/* Ajuste para telas muito estreitas */
+@media (max-width: 400px) {
+  .ct-title {
+    font-size: 1.7rem;
+  }
+
+  .ci-vl {
+    font-size: 0.85rem;
+    /* Ajusta e-mail longo para não quebrar layout */
+    word-break: break-all;
+  }
+}

@@ -285,3 +285,61 @@
 .th-vx {
   background: linear-gradient(135deg, #1a1a2e, #161b22);
 }
+
+/* --- RESPONSIVIDADE PROJETOS (ATÉ 768px) --- */
+@media (max-width: 768px) {
+  .pg-head {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .pg-sub {
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0 auto 24px;
+  }
+
+  .ftabs {
+    justify-content: center;
+    /* Centraliza o botão de currículo ou filtros */
+    gap: 12px;
+  }
+
+  .btn-cv2 {
+    width: 100%;
+    /* Botão de currículo ocupa a largura toda no mobile */
+    justify-content: center;
+  }
+
+  .proj-grid {
+    /* Muda de 3 colunas para 1 ou 2 dependendo do espaço */
+    /* auto-fill garante que se couberem dois cards de 300px ele os coloque lado a lado */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .pc-thumb {
+    height: 180px;
+    /* Aumenta um pouco a imagem para melhor visualização no toque */
+  }
+
+  .pc-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a imagem do projeto não distorça */
+  }
+}
+
+/* Ajuste específico para celulares pequenos (iPhone SE, etc) */
+@media (max-width: 480px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+    /* Força 1 coluna apenas */
+  }
+
+  .pc-body {
+    padding: 16px;
+    /* Reduz levemente o preenchimento interno do card */
+  }
+}

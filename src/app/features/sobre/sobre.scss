@@ -248,3 +248,72 @@
   border: 2px solid rgba(255, 255, 255, .5);
   cursor: pointer;
 }
+
+/* --- RESPONSIVIDADE SOBRE (ATÉ 768px) --- */
+@media (max-width: 768px) {
+  .sb-hero {
+    grid-template-columns: 1fr;
+    /* Empilha foto e texto */
+    justify-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .sb-av {
+    width: 160px;
+    /* Aumenta um pouco a foto no mobile para destaque */
+    height: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  .sb-h1 {
+    font-size: 2rem;
+  }
+
+  .sb-p {
+    margin: 0 auto 20px;
+  }
+
+  .sb-badges {
+    justify-content: center;
+  }
+
+  /* Grid de Tecnologias: de 4 colunas para 2 */
+  .sk-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Grid de Formação: de 2 colunas para 1 */
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sec-title {
+    justify-content: center;
+    /* Centraliza títulos das seções */
+    font-size: 1.2rem;
+  }
+}
+
+/* Ajuste para celulares muito pequenos */
+@media (max-width: 400px) {
+  .sk-cards {
+    grid-template-columns: 1fr;
+    /* 1 coluna de skills se for muito apertado */
+  }
+
+  .cert {
+    flex-direction: column;
+    /* Certificados empilhados se necessário */
+    text-align: center;
+    padding: 20px;
+  }
+}

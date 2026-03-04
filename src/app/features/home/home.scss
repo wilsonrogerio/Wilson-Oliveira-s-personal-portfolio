@@ -193,3 +193,69 @@
   font-weight: 600;
   margin-bottom: 20px
 }
+
+@media (max-width: 768px) {
+  .hero {
+    /* Muda de 2 colunas para 1 */
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    /* Centraliza o texto no mobile */
+  }
+
+  .hero-title {
+    /* Diminui a fonte para não transbordar */
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    /* Centraliza o parágrafo e remove o max-width fixo */
+    margin: 0 auto 32px;
+    font-size: 0.9rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+    /* Botões centralizados */
+    width: 100%;
+  }
+
+  .btn-p,
+  .btn-o {
+    width: 100%;
+    /* Botões ocupam a largura toda para facilitar o toque */
+    justify-content: center;
+  }
+
+  .hero-img {
+    /* Diminui o tamanho da "TV" ou imagem no mobile */
+    min-height: 200px;
+    order: -1;
+    /* Opcional: coloca a imagem ACIMA do texto no mobile */
+
+    lucide-icon {
+      transform: scale(0.7);
+      /* Reduz o ícone proporcionalmente */
+    }
+  }
+
+  .feat-grid {
+    /* Cards de benefícios ficam um embaixo do outro */
+    grid-template-columns: 1fr;
+  }
+
+  .pill {
+    /* Ajuste fino nas skills para telas estreitas */
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Ajuste extra para celulares muito pequenos (iPhone SE) */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
