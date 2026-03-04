@@ -9,11 +9,14 @@ import {
   Linkedin, Github
 
 } from 'lucide-angular';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay()),
+    provideRouter(routes),
+    provideClientHydration(withEventReplay()),
+    provideAnimationsAsync(),
     importProvidersFrom(
       LucideAngularModule.pick({
         House, User, Mail, TvMinimal, ArrowDownToLine, Database, ChevronsLeftRight,

@@ -1,5 +1,6 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/tags";
+@use "../../../styles/ui";
 
 .hero {
   display: grid;
@@ -180,12 +181,6 @@
 .btn-o:hover {
   border-color: $accent;
   color: $accent
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid $bd;
-  margin: 0 0 40px
 }
 
 .sec-title {

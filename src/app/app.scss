@@ -27,6 +27,10 @@
   /* Garante que o conteúdo não quebre em telas minúsculas */
   padding: 4rem 5dvw;
   /* Padding lateral dinâmico (5% da largura) */
+  position: relative;
+  /* Permite que as páginas se sobreponham no absolute durante a troca */
+  overflow-x: hidden;
+  /* Evita barras de rolagem se a página deslizar lateralmente */
 }
 
 /* Ajuste dinâmico da margem para respeitar os limites da sidebar */
