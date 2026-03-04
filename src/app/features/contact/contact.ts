@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Sidebar } from '../../core/components/sidebar/sidebar';
+import { LucideAngularModule } from 'lucide-angular';
+
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

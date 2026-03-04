@@ -5,7 +5,9 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import {
   LucideAngularModule, House, User, Mail, TvMinimal, ArrowDownToLine, Database, ChevronsLeftRight,
-  GitBranch, Dribbble, Layers, Container, Zap, MapPin, Globe, Bug, GraduationCap, Clock
+  GitBranch, Dribbble, Layers, Container, Zap, MapPin, Globe, Bug, GraduationCap, Clock, BadgeCheck,
+  Linkedin, Github
+
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -16,7 +18,7 @@ export const appConfig: ApplicationConfig = {
       LucideAngularModule.pick({
         House, User, Mail, TvMinimal, ArrowDownToLine, Database, ChevronsLeftRight,
         GitBranch, Dribbble, Layers, Container, Zap, MapPin, Globe, Bug, GraduationCap,
-        Clock
+        Clock, BadgeCheck, Linkedin, Github
       })
     )
   ]

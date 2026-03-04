@@ -17,7 +17,7 @@ export class Projects {
       title: "Portifolio Angular SSR",
       tecName: ['Angular', 'Scss', 'Typescript'],
       descript: 'Aplicação web desenvolvida com Angular, pagina de portifolio dinamica aplicando os conceitos modernos de Angular.',
-      linkRepository: 'https://github.com/wilsonrogerio/Portifolio-Pessoal'
+      linkRepository: 'https://portifolio-wilson-fullstack.vercel.app/inicio'
     },
     {
       imgUrl: '/nest-api.png',
