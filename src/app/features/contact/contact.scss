@@ -68,16 +68,9 @@
   margin: 24px 0 12px;
 }
 
-.soc-link {
+.soc-links {
   display: inline-flex;
-  align-items: center;
   gap: 8px;
-  padding: 9px 18px;
-  background: var(--bg2);
-  border: 1px solid var(--bd);
-  border-radius: 8px;
-  font-size: .85rem;
-  font-weight: 500;
 }
 
 .soc-link {
@@ -114,93 +107,6 @@ a {
   margin-top: 10px;
 }
 
-.form-card {
-  background: $bg2;
-  border: 1px solid $bd;
-  border-radius: 14px;
-  padding: 28px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.form-g {
-  margin-bottom: 16px;
-}
-
-.form-lbl {
-  display: block;
-  font-size: .8rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.fi,
-.fs,
-.fta {
-  width: 100%;
-  padding: 11px 14px;
-  background: $bg3;
-  border: 1px solid $bd;
-  border-radius: 8px;
-  color: $t1;
-  font-size: .875rem;
-  font-family: 'Inter', sans-serif;
-  outline: none;
-  transition: border-color .2s;
-}
-
-.fi::placeholder,
-.fta::placeholder {
-  color: $t2;
-}
-
-.fi:focus,
-.fs:focus,
-.fta:focus {
-  border-color: $accent;
-}
-
-.fs {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-color: $bg3;
-}
-
-.fs option {
-  background: $bg3;
-  color: $t1;
-}
-
-.fta {
-  resize: vertical;
-  min-height: 120px;
-  line-height: 1.6;
-}
-
-.btn-send {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  background: $accent;
-  color: #fff;
-  border-radius: 8px;
-  font-size: .9rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 4px;
-}
 
 /* --- RESPONSIVIDADE CONTATO (ATÉ 768px) --- */
 @media (max-width: 768px) {
@@ -248,21 +154,6 @@ a {
     justify-content: center;
   }
 
-  .form-card {
-    padding: 20px;
-    /* Reduz o padding do card para ganhar espaço interno */
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-    /* Nome e Sobrenome ficam empilhados */
-    gap: 16px;
-  }
-
-  .quote {
-    text-align: center;
-    padding: 16px;
-  }
 }
 
 /* Ajuste para telas muito estreitas */
