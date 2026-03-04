@@ -9,21 +9,21 @@
     </div>
   </div>
   <nav class="sb-nav">
-    <a class="ni" routerLink="/">
+    <a class="ni" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}">
       <lucide-icon name="house"></lucide-icon>Início
     </a>
-    <a class="ni" routerLink="/projetos">
+    <a class="ni" routerLink="/projetos" routerLinkActive="active">
       <lucide-icon name="tv-minimal"></lucide-icon>Projetos
     </a>
-    <a class="ni" routerLink="/sobre">
+    <a class="ni" routerLink="/sobre" routerLinkActive="active">
       <lucide-icon name="user"></lucide-icon>Sobre
     </a>
-    <a class="ni" routerLink="/contato">
+    <a class="ni" routerLink="/contato" routerLinkActive="active">
       <lucide-icon name="mail"></lucide-icon>Contato
     </a>
   </nav>
   <div class="sb-bottom" id="sb-bottom"><button class="cv-btn">
-      <lucide-icon name="arrow-down-to-line"></lucide-icon>Contato
+      <lucide-icon name="arrow-down-to-line"></lucide-icon>
       Baixar CV</button>
   </div>
 </aside>

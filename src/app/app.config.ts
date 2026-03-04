@@ -3,14 +3,21 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { LucideAngularModule, House, User, Mail, TvMinimal, ArrowDownToLine } from 'lucide-angular';
+import {
+  LucideAngularModule, House, User, Mail, TvMinimal, ArrowDownToLine, Database, ChevronsLeftRight,
+  GitBranch, Dribbble, Layers, Container, Zap, MapPin, Globe, Bug, GraduationCap, Clock
+} from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes), provideClientHydration(withEventReplay()),
     importProvidersFrom(
-      LucideAngularModule.pick({ House, User, Mail, TvMinimal, ArrowDownToLine })
+      LucideAngularModule.pick({
+        House, User, Mail, TvMinimal, ArrowDownToLine, Database, ChevronsLeftRight,
+        GitBranch, Dribbble, Layers, Container, Zap, MapPin, Globe, Bug, GraduationCap,
+        Clock
+      })
     )
   ]
 };

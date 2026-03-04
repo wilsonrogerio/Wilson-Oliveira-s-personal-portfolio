@@ -164,6 +164,11 @@
   display: block
 }
 
+.ni.active {
+  background: $accent;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
 }

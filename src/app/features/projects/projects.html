@@ -3,152 +3,41 @@
   <p class="pg-sub">Exploração de tecnologias e soluções que desenvolvi ao longo da minha jornada.</p>
 
   <div class="ftabs">
-    <div class="ftabs-l">
+    <!-- <div class="ftabs-l">
       <button class="ftab active">Todos</button>
       <button class="ftab">React</button>
       <button class="ftab">Node.js</button>
       <button class="ftab">TypeScript</button>
       <button class="ftab">UI Design</button>
       <button class="ftab">Mobile</button>
-    </div>
-    <button class="btn-cv2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="7 10 12 15 17 10" />
-        <line x1="12" y1="15" x2="12" y2="3" />
-      </svg>Currículo</button>
+    </div> -->
+    <button class="btn-cv2">
+      <lucide-icon name="arrow-down-to-line" size="20"></lucide-icon>
+      Currículo</button>
   </div>
 
   <div class="proj-grid">
+    @for (proj of projects; track proj) {
     <div class="pc">
-      <div class="pc-thumb th-ec"><span>E COMMERCE</span>
-        <div class="pc-badge">WEB</div>
+      <div class="pc-thumb th-ec">
+        <img [src]="proj.imgUrl" [alt]="proj.title" class="pc-thumb th-ec">
+        <div class="pc-badge">{{proj.category}}</div>
       </div>
       <div class="pc-body">
-        <div class="pc-title">NeoShop E-commerce</div>
-        <div class="pc-desc">Plataforma completa de vendas online com carrinho, checkout Stripe...</div>
-        <div class="pc-tags"><span class="pt">React</span><span class="pt">Tailwind</span><span
-            class="pt">Node.js</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
+        <div class="pc-title">{{proj.title}}</div>
+        <div class="pc-desc">{{proj.descript}}</div>
+        <div class="pc-tags">
+          @for (item of proj.tecName; track item) {
+          <span class="pt">{{item}}</span>
+          }
+        </div>
+        <div class="pc-foot"><a class="pc-link" [href]="proj.linkRepository">Ver Detalhes ↗</a>
+          <div class="pc-code">
+            <lucide-icon name="chevronsLeftRight" size="20" color="#4a9eff"></lucide-icon>
+          </div>
         </div>
       </div>
     </div>
-    <div class="pc">
-      <div class="pc-thumb th-ft">
-        <div class="pc-badge">DASHBOARD</div>
-        <svg width="70" height="40" viewBox="0 0 70 40" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity=".6">
-          <polyline points="0,35 12,20 24,25 36,10 48,18 70,3" />
-          <line x1="0" y1="40" x2="70" y2="40" />
-        </svg>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">FinTrack Analytics</div>
-        <div class="pc-desc">Painel administrativo para controle de investimentos, com gráficos...</div>
-        <div class="pc-tags"><span class="pt">Next.js</span><span class="pt">Chart.js</span><span
-            class="pt">Prisma</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-thumb th-sc">
-        <div class="pc-badge">MOBILE</div>
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" stroke="#4ade80" stroke-width="1.5" opacity=".4">
-          <circle cx="25" cy="20" r="14" />
-          <path d="M10 46 Q25 34 40 46" />
-        </svg>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">SocialConnect App</div>
-        <div class="pc-desc">Aplicativo mobile para conexão entre profissionais criativos com chat em...</div>
-        <div class="pc-tags"><span class="pt">React Native</span><span class="pt">Firebase</span><span
-            class="pt">Expo</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-thumb th-ap">
-        <div class="pc-badge">BACKEND</div>
-        <span style="font-size:2rem;font-weight:800;color:#3b82f6;opacity:.6">API</span>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">LogiCore API</div>
-        <div class="pc-desc">Arquitetura de microsserviços para gestão logística robusta com...</div>
-        <div class="pc-tags"><span class="pt">Node.js</span><span class="pt">Docker</span><span
-            class="pt">PostgreSQL</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-thumb th-pf">
-        <div class="pc-badge">FRONTEND</div>
-        <div style="text-align:center">
-          <div
-            style="font-size:.6rem;font-weight:700;color:#94a3b8;letter-spacing:.1em;text-transform:uppercase;opacity:.7;line-height:1.8">
-            NUEN NATUREL<br>SAFE RELEASE<br>WORK</div>
-        </div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">Minimalist Portfolio</div>
-        <div class="pc-desc">Website estático focado em alta performance e acessibilidade para...</div>
-        <div class="pc-tags"><span class="pt">Astro</span><span class="pt">Svelte</span><span class="pt">CSS
-            Modules</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-thumb th-vx">
-        <div class="pc-badge">DESIGN</div>
-        <svg width="70" height="50" viewBox="0 0 70 50" fill="none" stroke="#8b949e" stroke-width="1" opacity=".5">
-          <rect x="2" y="2" width="30" height="8" rx="2" />
-          <rect x="2" y="14" width="20" height="6" rx="2" />
-          <rect x="2" y="24" width="25" height="6" rx="2" />
-          <rect x="38" y="2" width="30" height="8" rx="2" />
-          <rect x="38" y="14" width="20" height="6" rx="2" />
-          <circle cx="38" cy="36" r="4" fill="#8b949e" opacity=".4" />
-        </svg>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">Vortex UI System</div>
-        <div class="pc-desc">Sistema de design completo e biblioteca de componentes...</div>
-        <div class="pc-tags"><span class="pt">Figma</span><span class="pt">Storybook</span><span
-            class="pt">TypeScript</span></div>
-        <div class="pc-foot"><a class="pc-link" href="#">Ver Detalhes ↗</a>
-          <div class="pc-code"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
+    }
   </div>
 </div>

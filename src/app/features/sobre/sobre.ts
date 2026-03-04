@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Sidebar } from '../../core/components/sidebar/sidebar';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-sobre',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './sobre.html',
   styleUrl: './sobre.scss',
 })
